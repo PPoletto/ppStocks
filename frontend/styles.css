@@ -12,7 +12,7 @@
 }
 
 #ppStocksChartTable th {
-	text-align: right;
+	text-align: left;
 }
 
 #ppStocksChartTable td:nth-child(1) {
