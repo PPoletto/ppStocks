@@ -5,15 +5,12 @@
 .removeline {
 	color: white;
 	background-color: black!important;
-	height: 20px;
-	width: 20px;
+	height: 24px;
+	width: 24px;
 	border-radius: 50%;
-	display:block;  
-	float:left;
+	display:block;
+	margin: 0 0 10px 0;
 	text-align: center;
-	font-family: Verdana, Geneva, Tahoma, sans-serif;
-	font-size: 1em;
-	/*transform: rotate(45deg);*/
   }
   
   .removeline:hover {

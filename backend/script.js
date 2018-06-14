@@ -1,3 +1,7 @@
+$(document).ready(function () {
+	loadppStocksConfig();
+});
+
 (function(root, factory) {
 
   // AMD
@@ -128,10 +132,10 @@
       serializeJSON();
   };
   
-  //if (typeof $.fn !== "undefined") {
-  //  $.fn.serializeObject = FormSerializer.serializeObject;
-  //  $.fn.serializeJSON   = FormSerializer.serializeJSON;
-  //}
+  if (typeof $.fn !== "undefined") {
+    $.fn.serializeObject = FormSerializer.serializeObject;
+    $.fn.serializeJSON   = FormSerializer.serializeJSON;
+  }
   
   exports.FormSerializer = FormSerializer;
   
@@ -206,13 +210,13 @@ function addSymbol(t, symbol, cur, notNew){
     }).append(
       $('<a/>', {
         //href: '#',
-        class: 'removeline',
-        //text: '+',
-        text: '―',
+        //class: 'removeline',
+        text: 'Remove Symbol',
         click: function() {$(this).parent('div').remove()}
       }),
       $('<input/>', {
         type: 'text',
+        class: 'symbol',
         name: 'stocks[' + symbol + ']',
         title: 'SYMBOL',
         value: symbol,
@@ -265,7 +269,7 @@ function addSymbol(t, symbol, cur, notNew){
   return r
 }
 
-$(document).ready(function() {
+loadppStocksConfig = function() {
   currencies = [
   {'code':'AED','name':'United Arab Emirates Dirham'},
   {'code':'AFN','name':'Afghan Afghani'},
@@ -424,9 +428,7 @@ $(document).ready(function() {
   {'code':'ZMW','name':'Zambian Kwacha'},
   {'code':'ZWL','name':'Zimbabwean Dollar'}
   ];
-  //'<?php echo $ppStocks;?>'
-  ppStocks = '{"totalCurrency":"EUR","stocks":{"11L1.F":{"currency":"EUR","2018-05-01":{"shares":"40","price":"24.5"}},"AHLA.DE":{"currency":"EUR","2017-12-01":{"shares":"10","price":"148.8"}},"FRE.DE":{"currency":"EUR","2017-12-01":{"shares":"12","price":"60.95"}},"LYPS.DE":{"currency":"EUR","2017-07-11":{"shares":"60","price":"21.9"}},"SQU.F":{"currency":"EUR","2017-06-09":{"shares":"30","price":"77.76"},"2018-06-07":{"shares":"30","price":"84.5"}},"4GLD.SG":{"currency":"EUR","2016-11-14":{"shares":"8","price":"36.5"}}}}'
-  //ppStocks = $ppStocks
+  ppStocks = '<?php echo $ppStocks;?>'
   ConfigObject = JSON.parse(ppStocks)
 
   $form = $('<form/>');
@@ -483,7 +485,6 @@ $(document).ready(function() {
   });
 
   $('#ppStocks').append($form);  
-  //console.log($form[0])
   $('#totalCurrency').val(ConfigObject.totalCurrency);
 
   for(stock in ConfigObject.stocks)
@@ -497,14 +498,10 @@ $(document).ready(function() {
       }      
     }
   }
-});
+};
 
 $('#stocks__edit').click(function() {
-  console.log($form.serializeJSON())
-  //$.post('setConfigValueAjax.php', {'key': 'ppStocks', 'value': $form.serializeJSON()});
-	$.post('setConfigValueAjax.php', {'key': 'ppStocksOk', 'value': true});
-
-  $.post('setConfigValueAjax.php', {'key': 'reload', 'value': 1});
+  $.post('setConfigValueAjax.php', {'key': 'ppStocks', 'value': $form.serializeJSON()});
 
   $('#ok').show(30, function() {
     $(this).hide('slow');
