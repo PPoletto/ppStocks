@@ -258,7 +258,6 @@ function addSymbol(t, symbol, cur, notNew){
         click: function() {
           $(this).parent('div').find('input[type="text"]').prop('disabled', true);
           addLot($(this).prev('div').children('table'), $(this).parent('div').find('input[type="text"]').val(), (new Date()).toISOString().substring(0, 10), 0, 0)
-          //addLot($(this).prev('div').children('table'), $(this).parent('div').find('input[type="text"]').val(), momentDate.format('YYYY-MM-DD'), 0, 0)
         }
       })
     )
