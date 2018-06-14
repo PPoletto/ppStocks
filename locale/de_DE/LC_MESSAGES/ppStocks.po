@@ -1,0 +1,42 @@
+# mirr.OS ppStocks Module v1.0.0
+# Copyright (C) 2018
+# Pascal Poletto <pascal@poletto.eu>, 2018
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: mirr.OS ppStocks Module V1.0.0\n"
+"POT-Creation-Date: 2018-06-03 11:02+0200\n"
+"PO-Revision-Date: 2018-06-11 22:06+0200\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.8\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Last-Translator: Pascal Poletto <pascal@poletto.eu>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: de_DE\n"
+
+msgid "ppStocks_title"
+msgstr "ppStocks"
+
+msgid "ppstocks_description"
+msgstr "Zeigt dir die aktuellen Kurse deiner Aktien"
+
+msgid "ppStocksSave"
+msgstr "Konfiguration speichern"
+
+msgid "ppStocksConfigHeader"
+msgstr "Stocks Konfiguration"
+
+msgid "ppStocksResetConfig"
+msgstr "Konfiguration zurücksetzen"
+
+msgid "ppStocksResetConfigMessage"
+msgstr "Möchtest du die gespeicherte Konfiguration wirklich zurücksetzen"
+
+msgid "ppStocksApiKeyHelpDescription"
+msgstr "Um die richtigen API zu finden anhand der Firmen / Aktien Namen schaue einfach bei https://www.iextrading.com vorbei. (Momentan werden hier leider nur keine deutschen Märkte unterstützt)"
+
+msgid "ppStocksConfigHelpDescription"
+msgstr "Um die richtigen Symbole zu finden anhand der Firmen / Aktien Namen schaue einfach bei https://www.iextrading.com vorbei. (Momentan werden hier leider nur keine deutschen Märkte unterstützt)"

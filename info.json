@@ -1,0 +1,18 @@
+{
+    "module": {
+        "name": "ppStocks",
+        "version": "1.0.0",
+        "description": "Zeigt dir die aktuellen kurse deiner Aktien",
+        "module_url": "https:\/\/poletto.eu",
+        "download_url": "https:\/\/poletto.eu",
+        "category": "news",
+        "release_date": "2018-06-03",
+        "last_update": "2018-06-03"
+    },
+    "creator": {
+        "name": "Pascal Poletto",
+        "contact": "pascal@poletto.eu",
+        "website": "https:\/\/poletto.eu",
+        "profile": "https:\/\/poletto.eu"
+    }
+}
